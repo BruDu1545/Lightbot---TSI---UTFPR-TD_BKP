@@ -16,6 +16,16 @@ introductory courses on algorithms, control flow, and problem decomposition.
 
 ---
 
+## idéias para o trabalho
+- Novos comandos
+- Novas fases (grupos de fases)
+- Documentação do código (para turmas futuras)
+- Melhorar os themas
+- Novos personages
+- Novas sons
+
+---
+
 ## Play online
 
 You can play Lightbot directly in your browser:
