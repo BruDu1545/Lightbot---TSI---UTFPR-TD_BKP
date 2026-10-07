@@ -58,6 +58,12 @@
   --noise: 0;
 }
 
+/*todos os svg dos ícones foram retirados de game-icons.net*/
+
+.lb-instruction-row svg {
+    color: var(--color-base-content);
+}
+
 /* Non-Tailwind assets / legacy helpers kept as small component classes */
 @layer components {
   .achievement {
