@@ -1,12 +1,16 @@
 // Vite entry point: create the app instance, initialize UI/i18n/history, then start the canvas render loop.
 import "./styles/main.css";
+import { initThemeBackground } from "./lightbot/lightbot.theme.background.js";
 
 // Styles are in place now; reveal the page (see the inline style in index.html).
 document.documentElement.classList.add("lb-ready");
 
 var assetBaseUrl = import.meta.env.BASE_URL || "/";
 document.documentElement.style.setProperty("--lb-achievement-bg", 'url("' + assetBaseUrl + 'img/achievement.png")');
-document.documentElement.style.setProperty("--lb-medals-bg", 'url("' + assetBaseUrl + 'img/medals.png")');
+["gold", "silver", "bronze"].forEach(function (metal) {
+  document.documentElement.style.setProperty("--lb-medal-" + metal + "-bg", 'url("' + assetBaseUrl + 'img/medals/' + metal + '.png")');
+});
+initThemeBackground(assetBaseUrl);
 
 import { themeChange } from "theme-change";
 
@@ -51,3 +55,4 @@ runWhenDomReady(function () {
     console.error("Lightbot boot failed:", e);
   });
 });
+
